@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio Simone Ferrero</title>
+	<link rel="stylesheet" type="text/css" href="portfolio.css">
+  <link href='https://fonts.googleapis.com/css?family=Abel|Palanquin:700,400'
+		rel='stylesheet' type='text/css'>
+  <script src="portfolio.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.js"></script>
+</head>
+<body>
+	<script>
+		$(document).ready(function () {
+			var expanded = false;
+			$("#slider").on("click", function() {
+				if (expanded = !expanded) {
+					menuOpen();
+				} else {
+					menuClose();
+					$("#dropdown_menu")
+						.hide(500);
+				}
+			})
+			$("#projects > button").click(function() {
+				$("#dropdown_menu")
+					.toggle(500);
+			});
+		});
+	</script>
+	<div id="menu">
+		<div id="empty_space"></div>
+		<div id="menu_items">
+			<div id="projects">
+				<button id="projects" class="menu_item">
+					<span>Projects</span>
+				</button>
+				<div id="dropdown_menu">
+					<div>
+						<a href="#"><div id="decision_maker" class="menu_item">
+							<span>Decision Maker</span>
+						</div></a>
+					</div>
+					<div>
+						<a href="#"><div id="next_project" class="menu_item">
+							<span>Next Project</span>
+						</div></a>
+					</div>
+				</div>
+			</div>
+			<div>
+				<a href="#"><div id="about" class="menu_item">
+					<span>About</span>
+				</div></a>
+			</div>
+			<div>
+				<a href="#"><div id="contact" class="menu_item">
+					<span>Contact</span>
+				</div></a>
+			</div>
+		</div>
+	</div>
+	<div id="slider">
+		<span>MORE</span>
+	</div>
+	<div id="container">
+		<div id="background">
+			<div id="banner">
+				<div id="title">
+					<span>SIMONE FERRERO</span>
+				</div>
+				<div id="claim">
+					<span>A fresh take on Web Development</span>
+				</div>
+				<div id="scroller">
+					<span>What is this?</span>
+				</div>
+			</div>
+		</div>
+		<div id="description">
+		</div>
+		</div>
+	</div>
+	<div id="home"><img src="temp_logo.png"/>
+</body>
+<script>
+	slowScroll();
+
+	callParallax($("#background"), 0.3);
+
+	//var banner = document.getElementById("banner");
+	//callParallax(banner, .35);
+
+	//fade('#banner', 300);
+
+	//fade('#scrolldown_button', 200);
+</script>
+</html>
